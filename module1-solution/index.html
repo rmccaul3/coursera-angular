@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html ng-app="myApp">
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <script type="application/x-javascript" src="angular.min.js"></script>
+    <script type="application/ecmascript" src="app.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller="MyController">
+    <div id="input">
+        <input type="text" class="input" ng-model="items" />
+    </div>
+    <p>You listed the following items: {{listedItems}}</p>
+    <p ng-bind="message"></p>
+    <div id="button" class="button">
+        <button ng-click="countItems()">Check If Too Much</button>
+    </div>
+
+
+</body>
+
+</html>
