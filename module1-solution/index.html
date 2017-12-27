@@ -14,8 +14,9 @@
 
 <body ng-controller="MyController">
     <div id="input">
-        <input type="text" class="input" ng-model="items" />
+        <input type="text" class="input" ng-model="items" size="50" />
     </div>
+    <p class="note">*Note, we do not accept blank items.</p>
     <p>You listed the following items: {{listedItems}}</p>
     <p ng-bind="message"></p>
     <div id="button" class="button">
