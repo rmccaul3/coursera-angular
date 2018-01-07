@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html ng-app="ShoppingListCheckOff">
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">-->
+
+<body>
+    <div ng-controller="ShoppingListBuyController as buyList">
+        <h4>To Buy</h4>
+        <div>
+            <div>
+                <h5>{{message}}</h5>
+            </div>
+        </div>
+        <ol>
+            <li ng-repeat="item in buyList.items">
+                Buy {{ item.quantity }} {{ item.name }} <button ng-click="buyList.updateList($index);">Bought</button> </li>
+        </ol>
+    </div>
+    <div ng-controller="ShoppingListBoughtController as boughtList">
+        <h4>Already Brought</h4>
+        <div>
+            <div>
+                <h5>{{message}}</h5>
+            </div>
+        </div>
+        <ol>
+            <li ng-repeat="boughtItem in boughtList.boughtItems"> Bought {{ boughtItem.quantity }} {{ boughtItem.name }} </li>
+        </ol>
+    </div>
+</body>
+<script type="application/javascript" src="angular.min.js"></script>
+<script type="application/javascript" src="app.js"></script>
+
+</html>
